@@ -1,0 +1,1 @@
+{"name":"user roles","query":"SELECT email, display_name AS role, active FROM iv.user\nJOIN iv.rel_user_role ON iv.user.id = iv.rel_user_role.user_id \nJOIN iv.role ON iv.rel_user_role.role_id = iv.role.id\n--JOIN iv.agency ON iv.user.agency_id = iv.agency.id\nORDER BY email ASC"}
